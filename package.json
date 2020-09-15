@@ -39,7 +39,6 @@
     "dependencies": {
         "axios": "^0.20.0",
         "chalk": "^4.1.0",
-        "winston": "^3.3.3",
         "yargs": "^16.0.3"
     }
 }

@@ -1,7 +1,6 @@
 import {OutputFormat, ScannerResult} from './enums';
 import chalk from 'chalk';
 import {fork} from 'child_process';
-import {logger} from './logger';
 import sites from './sites.json';
 import Timer from './lib/timer';
 
@@ -72,42 +71,42 @@ export default class Scanner {
         switch (siteResult.result) {
             case ScannerResult.SUCCESS:
                 if (this.options.realtimeOutput) {
-                    logger.info(chalk`{bold [{green ✓}] {green ${siteResult.site}: }${siteResult.url}}`);
+                    console.log(chalk`{bold [{green ✓}] {green ${siteResult.site}: }${siteResult.url}}`);
                 }
 
                 break;
             case ScannerResult.NOT_FOUND:
                 if (this.options.realtimeOutput && !this.options.onlyMatching) {
-                    logger.info(chalk`{bold [{red -}] {gray ${siteResult.site}}}`);
+                    console.log(chalk`{bold [{red -}] {gray ${siteResult.site}}}`);
                 }
 
                 break;
             default:
                 if (this.options.realtimeOutput && !this.options.onlyMatching) {
-                    logger.info(chalk`{bold [{red -}] {red ${siteResult.site}: }${siteResult.error}}`);
+                    console.log(chalk`{bold [{red -}] {red ${siteResult.site}: }${siteResult.error}}`);
                 }
         }
     }
 
     outputTotalResults(): void {
         if (this.options.realtimeOutput) {
-            logger.info(chalk.green(`\nFinished in ${Timer.end()}ms.`));
-            logger.info(chalk`{green Found a total of {bold ${this.getTotalMatches()} matches} across {bold ${Object.keys(sites).length}} sites.}`);
+            console.log(chalk.green(`\nFinished in ${Timer.end()}ms.`));
+            console.log(chalk`{green Found a total of {bold ${this.getTotalMatches()} matches} across {bold ${Object.keys(sites).length}} sites.}`);
             return;
         }
 
         // Export in different formats
         switch (this.options.format) {
             case OutputFormat.JSON:
-                logger.info(JSON.stringify(this.results));
+                console.log(JSON.stringify(this.results));
                 break;
             case OutputFormat.PRETTY_JSON:
-                logger.info(JSON.stringify(this.results, null, 4));
+                console.log(JSON.stringify(this.results, null, 4));
                 break;
             case OutputFormat.CSV:
-                logger.info('site,url,result,error');
+                console.log('site,url,result,error');
                 for (const site of this.results) {
-                    logger.info(`${site.site},${site.url},${site.result},${site.error ?? 'null'}`);
+                    console.log(`${site.site},${site.url},${site.result},${site.error ?? 'null'}`);
                 }
                 break;
         }
