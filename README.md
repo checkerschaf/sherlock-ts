@@ -8,7 +8,7 @@
 
 Sherlock.TS is a remake of the original [sherlock](https://github.com/sdushantha/sherlock) written in Python by [sdushantha](https://github.com/sdushantha).
 
-It's written in TypeScript because I wanted to test how to create a CLI in NodeJs + TypeScript that can be executed on Windows, MacOS and Linux 😊
+It's written in TypeScript because I wanted to test how to create a CLI in NodeJs + TypeScript that can be executed on Windows, MacOS and Linux (within 24h) 😊 And it worked! I'm planning to update and improve this project further - feel free to create an issue with your ideas.
 
 #### Master-Branch Status
 ![Node.js CI](https://github.com/checkerschaf/sherlock-ts/workflows/Node.js%20CI/badge.svg?branch=master)
