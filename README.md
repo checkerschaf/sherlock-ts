@@ -6,7 +6,7 @@
   <br><br>
 </p>
 
-Sherlock-TS is a remake of the original [sherlock](https://github.com/sdushantha/sherlock) written in Python by [sdushantha](https://github.com/sdushantha).
+Sherlock.TS is a remake of the original [sherlock](https://github.com/sdushantha/sherlock) written in Python by [sdushantha](https://github.com/sdushantha).
 
 It's written in TypeScript because I wanted to test how to create a CLI in NodeJs + TypeScript that can be executed on Windows, MacOS and Linux 😊
 
