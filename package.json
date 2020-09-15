@@ -7,9 +7,9 @@
         "sherlock": "build/index.js"
     },
     "scripts": {
-        "build": "tsc",
+        "build": "tsc && tsc",
         "pkg": "pkg package.json -o sherlockts",
-        "pkg-all": "pkg -t latest-linux-x64 package.json -o build/pkgs/sherlockts && pkg -t latest-macos-x64 package.json -o build/pkgs/sherlockts-macos && pkg -t latest-win-x64 package.json -o build/pkgs/sherlockts.exe",
+        "pkg-all": "pkg -t latest-linux-x64 package.json -o sherlockts && pkg -t latest-macos-x64 package.json -o sherlockts-mac && pkg -t latest-win-x64 package.json -o sherlockts.exe",
         "lint": "eslint --ext .ts .",
         "lint-fix": "eslint --fix --ext .ts .",
         "local": "npm i -g && sherlock",

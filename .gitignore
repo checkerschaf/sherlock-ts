@@ -8,5 +8,8 @@
 *.log
 .DS_Store
 .eslintcache
+
+# Executables
 sherlockts
+sherlockts-mac
 sherlockts.exe

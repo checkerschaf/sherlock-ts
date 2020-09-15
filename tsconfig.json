@@ -39,7 +39,8 @@
         "resolveJsonModule": true,
         // Experimental Options
         "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "removeComments": true
     },
     // File Inclusions
     "include": [
