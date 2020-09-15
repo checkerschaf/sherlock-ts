@@ -1,9 +1,8 @@
 import chalk from 'chalk';
-import {logger} from './logger';
 
 export default class BeautifulOutputs {
     static sherlockTs(): void {
-        logger.info(chalk`
+        console.log(chalk`
           {cyan                                                                                ,_
   ███████╗██╗  ██╗███████╗██████╗ ██╗      ██████╗  ██████╗██╗  ██╗████████╗███████╗   ,'  \`\\,_
   ██╔════╝██║  ██║██╔════╝██╔══██╗██║     ██╔═══██╗██╔════╝██║ ██╔╝╚══██╔══╝██╔════╝   |_,-'_)
@@ -17,7 +16,6 @@ export default class BeautifulOutputs {
     }
 
     static fatalError(err: Error): void {
-        logger.debug(err);
-        logger.error(chalk.red(`[!] Fatal error: ${err.message || err}`));
+        console.log(chalk.red(`[!] Fatal error: ${err.message || err}`));
     }
 }

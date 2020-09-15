@@ -1,6 +1,5 @@
 import axios from 'axios';
 import fs from 'fs';
-import {logger} from '../logger';
 
 interface Site {
     [key: string]: string;
@@ -19,6 +18,6 @@ getSites('https://raw.githubusercontent.com/sherlock-project/sherlock/master/she
     .then((sites) => {
         console.log(sites);
         fs.writeFileSync('./src/sites.json', JSON.stringify(sites, null, 4));
-        logger.info(`Successfully written ${sites.length} to src/sites.json`);
+        console.log(`Successfully written ${sites.length} to src/sites.json`);
     })
     .catch(err => console.error(err));

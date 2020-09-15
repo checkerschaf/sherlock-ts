@@ -40,8 +40,8 @@ const argv = yargs.options({
     },
 })
     .epilogue(chalk`📖 {cyan For more details please visit} {underline.blue https://github.com/checkerschaf/sherlock-ts}`)
-    .example(chalk`{yellow sherlockts -n=JohnDoe}`, 'Search for JohnDoe')
-    .example(chalk`{yellow sherlockts -n=JohnDoe -m}`, 'Search for JohnDoe and only show matches')
+    .example(chalk`{yellow ./sherlockts -n=JohnDoe}`, 'Search for JohnDoe')
+    .example(chalk`{yellow ./sherlockts -n=JohnDoe -m}`, 'Search for JohnDoe and only show matches')
     .argv;
 
 const realtimeOutput = !argv.format;
