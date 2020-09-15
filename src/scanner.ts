@@ -9,7 +9,7 @@ type ScannerOptions = {
     onlyMatching?: boolean;
     realtimeOutput?: boolean;
     timeout?: number;
-    format?: OutputFormat|string;
+    format?: OutputFormat | string;
 };
 
 type SiteResult = {

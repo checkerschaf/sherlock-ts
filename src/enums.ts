@@ -1,5 +1,5 @@
 export enum OutputFormat {
-    JSON = 'json', PRETTY_JSON = 'pretty-json', CSV = 'csv'
+    JSON = 'JSON', PRETTY_JSON = 'PRETTY_JSON', CSV = 'CSV'
 }
 
 export enum ScannerResult {
