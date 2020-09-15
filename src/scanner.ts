@@ -71,7 +71,7 @@ export default class Scanner {
         switch (siteResult.result) {
             case ScannerResult.SUCCESS:
                 if (this.options.realtimeOutput) {
-                    console.log(chalk`{bold [{green ✓}] {green ${siteResult.site}: }${siteResult.url}}`);
+                    console.log(chalk`{bold [{green +}] {green ${siteResult.site}: }${siteResult.url}}`);
                 }
 
                 break;

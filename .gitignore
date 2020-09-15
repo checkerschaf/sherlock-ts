@@ -10,6 +10,6 @@
 .eslintcache
 
 # Executables
-sherlockts
-sherlockts-mac
-sherlockts.exe
+sherlockts-linux
+sherlockts-macos
+sherlockts-win.exe
