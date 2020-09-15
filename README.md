@@ -15,7 +15,7 @@ It's written in TypeScript because I wanted to test how to create a CLI in NodeJ
 
 ## How to use?
 
-1. Simply down the executable for your system from the [latest release](https://github.com/checkerschaf/sherlock-ts/releases).
+1. Simply down the executable for your system from the [latest release](https://github.com/checkerschaf/sherlock-ts/releases/latest).
 2. Open the command line where your file is located. [Here](https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/#:~:text=Open%20Command%20Prompt%20from%20the,open%20an%20administrator%20Command%20Prompt.) is a tutorial if you aren't familiar with that.
 3. Run the script by using:
     - Windows: `sherlockts-win.exe --username=JohnDoe`
