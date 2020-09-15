@@ -1,0 +1,11 @@
+/.env
+/.idea
+/.vs_code
+/build
+/node_modules
+/coverage
+*.iml
+*.log
+.DS_Store
+.eslintcache
+sherlockts

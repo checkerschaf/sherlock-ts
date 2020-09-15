@@ -1,0 +1,49 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaVersion": 2019,
+        "sourceType": "module"
+    },
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "quotes": ["error", "single"],
+        "class-methods-use-this": "off",
+        "padded-blocks": [
+            "error",
+            "never"
+        ],
+        "no-ternary": "off",
+        "one-var": "off",
+        "promise/always-return": "off",
+        "comma-dangle": ["error", {
+            "arrays": "always",
+            "objects": "always"
+        }],
+        "sort-imports": ["error", {
+            "ignoreCase": true
+        }]
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.js"
+            ],
+            "rules": {
+                "@typescript-eslint/no-var-requires": "off"
+            }
+        }
+    ]
+}

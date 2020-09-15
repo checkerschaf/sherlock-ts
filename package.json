@@ -1,0 +1,45 @@
+{
+    "name": "sherlock-typescript",
+    "version": "0.1.0",
+    "description": "Find usernames across nearly all social networks - NodeJS + TypeScript remake of sdushantha/sherlock",
+    "main": "build/index.js",
+    "bin": {
+        "sherlock": "build/index.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "pkg": "pkg package.json -o sherlockts",
+        "pkg-all": "pkg -t latest-linux-x64,latest-macos-x64,latest-win-x64 package.json --out-path build/pkgs",
+        "lint": "eslint --ext .ts .",
+        "lint-fix": "eslint --fix --ext .ts .",
+        "local": "npm i -g && sherlock",
+        "start": "ts-node-dev --respawn --poll --transpile-only src/index.ts",
+        "test": "jest",
+        "test-ci": "yarn run lint && yarn audit && yarn run test",
+        "update-sites": "ts-node-dev --transpile-only src/commands/fetch-sites-from-sherlock.ts"
+    },
+    "pkg": {
+        "assets": [
+            "build/sites.json"
+        ]
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^26.0.13",
+        "@types/node": "^14.10.1",
+        "@typescript-eslint/eslint-plugin": "^4.1.1",
+        "@typescript-eslint/parser": "^4.1.1",
+        "eslint": "^7.9.0",
+        "jest": "^26.4.2",
+        "pkg": "^4.4.9",
+        "ts-jest": "^26.3.0",
+        "ts-node-dev": "^1.0.0-pre.62",
+        "typescript": "^4.0.2"
+    },
+    "dependencies": {
+        "axios": "^0.20.0",
+        "chalk": "^4.1.0",
+        "winston": "^3.3.3",
+        "yargs": "^16.0.3"
+    }
+}

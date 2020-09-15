@@ -1,0 +1,49 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        // Project Options
+        "target": "es2019",
+        "module": "commonjs",
+        "lib": [
+            "dom",
+            "es5",
+            "es2015",
+            "es2016",
+            "es2017",
+            "es2018",
+            "es2019",
+            "es2020"
+        ],
+        "outDir": "./build",
+        "sourceMap": true,
+        // Strict Type-Checking Option
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strict": true,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": false,
+        "suppressImplicitAnyIndexErrors": true,
+        // Linter Checks
+        "allowUnreachableCode": false,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        // Module Resolution
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": false,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        // Experimental Options
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    // File Inclusions
+    "include": [
+        "src/**/*",
+        "src/**/*.json"
+    ]
+}
