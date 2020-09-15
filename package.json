@@ -1,6 +1,6 @@
 {
     "name": "sherlockts",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Find usernames across 300+ social networks and websites - NodeJS + TypeScript remake of sdushantha/sherlock",
     "main": "build/index.js",
     "bin": {
