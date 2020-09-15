@@ -1,7 +1,7 @@
 {
-    "name": "sherlock-typescript",
-    "version": "0.1.0",
-    "description": "Find usernames across nearly all social networks - NodeJS + TypeScript remake of sdushantha/sherlock",
+    "name": "sherlock-ts",
+    "version": "1.0.0",
+    "description": "Find usernames across 300+ social networks and websites - NodeJS + TypeScript remake of sdushantha/sherlock",
     "main": "build/index.js",
     "bin": {
         "sherlock": "build/index.js"
@@ -9,10 +9,11 @@
     "scripts": {
         "build": "tsc",
         "pkg": "pkg package.json -o sherlockts",
-        "pkg-all": "pkg -t latest-linux-x64,latest-macos-x64,latest-win-x64 package.json --out-path build/pkgs",
+        "pkg-all": "pkg -t latest-linux-x64 package.json -o build/pkgs/sherlockts && pkg -t latest-macos-x64 package.json -o build/pkgs/sherlockts-macos && pkg -t latest-win-x64 package.json -o build/pkgs/sherlockts.exe",
         "lint": "eslint --ext .ts .",
         "lint-fix": "eslint --fix --ext .ts .",
         "local": "npm i -g && sherlock",
+        "local-setup": "npm install && npm run build",
         "start": "ts-node-dev --respawn --poll --transpile-only src/index.ts",
         "test": "jest",
         "test-ci": "yarn run lint && yarn audit && yarn run test",
