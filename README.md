@@ -1,4 +1,4 @@
-# Sherlock.TS 🕵️ - search users across 300+ websites
+# Sherlock.TS 🕵️ - search users across 175+ websites
 
 <p align="center">
   <br>
